@@ -16,7 +16,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
+  A practice frontend mentor project of a QRcode design
+  Testing CSS
 ### Screenshot
 
 ![](images/screenshot.jpg)
@@ -25,8 +26,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL:(https://github.com/triplekdev/QR_code_frontend-mentor_project)
+- Live Site URL:(https://qr-code-frontend-mentor-project-five.vercel.app/)
 
 ## My process
 
@@ -49,6 +50,6 @@ I'm going to continue developing my css organisation
 
 ## Author
 
-- Github - [Triple K](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Github - [Triple K](https://github.com/triplekdev)
+- Frontend Mentor - [@triplekdev](https://www.frontendmentor.io/profile/triplekdev)
+- Twitter - [@3plkk](https://x.com/3plkk)
