@@ -1,4 +1,31 @@
+@layer global, component, utility;
+
+@layer global {
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/outfit-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/outfit-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
+	/* || FONTS */
+	--fs-15: calc(15 / 16 * 1rem);
+	--fs-27: calc(27 / 16 * 1rem);
+	
+	--fs-paragraph: var(--fs-15);
+	--fs-title: var(--fs-27);
+	
 	/* || COLORS */
 	--c-white: hsl(0, 0%, 100%);
 	--c-slate-300: hsl(212, 45%, 89%);
@@ -12,6 +39,89 @@
 	--color-shadow: var(--c-slate-500)
 }
 
+/* || RESET */
+*,*::after, *::before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+/* || MAIN GLOBAL STYLES */
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: var(--color-body-bg);
+	font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	line-height: 1.1;
+	font-size: var(--fs-title);
+	font-weight: 700;
+	color: var(--color-title-text);
+}
+
+p {
+	font-size: var(--fs-paragraph);
+	font-weight: 500;
+	color: var(--color-content-text);
+}
+}
+
+@layer component {
+	.main {
+		max-width: 375px;
+		background: var(--color-main-bg);
+		padding: 15px;
+		border-radius: 20px;
+		box-shadow: 0 2px 70px -30px var(--color-shadow);
+		
+		.main__qr-code-wrapper {
+			display: flex;
+			margin-bottom: 10px;
+			flex-flow: column;
+			justify-content: center;
+		}
+		
+		.main__text {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			text-align: center;
+			max-width: 300px;
+		}
+		
+		.main__qr-code {
+			width: 300px;
+			border-radius: 12px;
+			margin-inline: auto;
+			margin-bottom: 20px;
+		}
+		
+		.main__title {
+			margin-bottom: 18px;
+		}
+		.main__content {
+			margin-inline: auto;
+			text-align: center;
+			margin-bottom: 20px;
+			max-width: 250px;
+		}
+	}
+	
+}
 
 
 
@@ -21,8 +131,25 @@
 
 
 
-
-
+@layer utility {
+	.offscreen {
+		position: absolute;
+		left: -10000px;
+		top: auto;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		
+		&.skip:focus {
+			left: 0;
+			width: auto;
+			height: auto;
+			background: #fff;
+			padding: 10px;
+			border: 1px solid;
+		}
+	}
+}
 
 .attribution {
 	font-size: 11px;
